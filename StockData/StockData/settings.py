@@ -69,7 +69,7 @@ EXTENSIONS = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'StockData.pipelines.StockdataPipeline': None,
+   'StockData.pipelines.StockdataPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -108,7 +108,7 @@ REDIS_PORT = '6379'
 # 指定MongoDB的连接参数
 MONGO_HOST = "192.168.1.11"  # 主机IP
 MONGO_PORT = 27017  # 端口号
-MONGO_DB = "test"  # 库名
+MONGO_DB = "stock"  # 库名
 MONGO_COLL = "alldata"  # collection名
 # MONGO_USER = ""
 # MONGO_PSW = ""
