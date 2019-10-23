@@ -102,7 +102,7 @@ SCHEDULER_PERSIST = True
 # 指定爬虫起始URL类型为set
 REDIS_START_URLS_AS_SET = True
 # 指定redis数据库的连接参数
-REDIS_HOST = '192.168.1.11'
+REDIS_HOST = '101.132.123.44'
 REDIS_PORT = 6379
 
 # 用户代理池设置
