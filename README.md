@@ -9,13 +9,13 @@ StockData部分从redis中获取下载链接并将数据存入MongoDB
 **主要的依赖库：**
 
 ```
-python-3.5
+python 3.5
 
-scrapy-1.5.1
+scrapy 1.5.1
 
-scrapy-redis-0.6.8
+scrapy-redis 0.6.8
 
-pymongo==3.8.0
+pymongo 3.8.0
 ```
 
 具体可查看conda环境配置文件：[environment.yaml](./environment.yaml)
