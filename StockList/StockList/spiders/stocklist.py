@@ -23,28 +23,24 @@ class StocklistSpider(RedisSpider):
                 diff = resultJson['data']['diff']  # 股票代码在 diff 字段中
                 # print(diff)
                 if str(response.url) == 'http://94.push2.eastmoney.com/api/qt/clist/get?&pn=1&pz=20&po=1&np=2&fltt=2&fid=f3&fs=m:1+t:2&fields=f12,f14':
-                    # self.shStock(diff)
                     print('开始解析上海股票代码！')
                     for i in diff:
                         code = diff[str(i)]['f12']  # 取出代码
                         # self.R.sadd('stock:code_list', code)
                         item['code'] = code
-
+                        # 上海股票下载链接拼接
                         sh_download_url = self.download_url_piece + '0' + code
 
                         item['download_url'] = sh_download_url
 
                         yield item
                 else:
-                    # self.szStock(diff)
-                    # print('=' * 40)
                     item = StocklistItem()
                     print('开始解析深圳股票代码！')
                     for i in diff:
                         code = diff[str(i)]['f12']  # 取出代码
-                        # self.R.sadd('stock:code_list', code)
                         item['code'] = code
-
+                        # 深圳股票下载链接拼接
                         sz_download_url = self.download_url_piece + '1' + code
                         item['download_url'] = sz_download_url
 

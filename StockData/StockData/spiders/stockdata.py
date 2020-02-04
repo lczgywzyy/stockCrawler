@@ -14,8 +14,6 @@ class StockdataSpider(RedisSpider):
 
     redis_key = 'stock:download_url'
 
-    # hdfs_info = 'http://192.168.1.11:50070'
-
     def parse(self, response):
 
         item = StockdataItem()
@@ -34,6 +32,7 @@ class StockdataSpider(RedisSpider):
 
         code = sh_code + sz_code
         item['code'] = code
+        # 原始编码为gb2312
         alldata = str(response.body,encoding='gbk').split("\r\n") # 切分数据，转为列表
         # 删除第一个标签元素和最后一个空元素
         alldata.pop(0)
