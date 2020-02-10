@@ -24,7 +24,7 @@ StockData部分从redis中获取下载链接并将数据存入MongoDB
 
 ### 项目部署
 
-笔者采用三个节点器来爬取数据，OS都为Ubuntu18.04。一个节点放StockList部分，其他两个节点（理论上可以任意多个）放StockData部分。环境配置采用Anaconda3，需要先安装[Redis](./redisInstall.sh)和[MongoDB](./mongoInstall.md)。
+笔者采用三个节点器来爬取数据，OS都为Ubuntu18.04。一个节点放StockList部分，其他两个节点（理论上可以任意多个）放StockData部分。环境配置采用Anaconda3，需要先安装[Redis](https://github.com/Linuscn/stockCrawler/blob/master/redisIntsall.md)和[MongoDB](https://github.com/Linuscn/stockCrawler/blob/master/mongoInstall.md)。
 
 1.将开始链接（stock:start_url）写入Redis
 
