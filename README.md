@@ -50,14 +50,12 @@ scrapy crawl stocklist
 scrapy crawl stockdata
 ```
 
-4.查看MongoDB数据
+4.MongoDB数据
 
 考虑到爬取速度，所有数据存入一个集合，每支股票数据对应一个文档
 
-![](./mongo_data.png)
+![](./img/mongo_data.png)
 
+data字段对应数据格式如下
 
-
-
-
-
+![](./img/data.png)
